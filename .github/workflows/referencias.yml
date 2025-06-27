@@ -18,3 +18,5 @@ jobs:
           echo "Rama: ${{ github.ref }}"
           echo "Evento: ${{ github.event_name }}"
           echo "Sistema operativo: ${{ runner.os }}"
+      - name: Dump GitHub context
+        run: echo "${{ toJson(github) }}"
